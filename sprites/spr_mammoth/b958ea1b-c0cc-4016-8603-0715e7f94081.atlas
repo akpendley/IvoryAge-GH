@@ -1,0 +1,62 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+AoE Ground Pound
+  rotate: false
+  xy: 2, 294
+  size: 700, 700
+  orig: 700, 700
+  offset: 0, 0
+  index: -1
+Mammoth_Body
+  rotate: false
+  xy: 2, 50
+  size: 286, 242
+  orig: 286, 242
+  offset: 0, 0
+  index: -1
+Mammoth_Front_Leg
+  rotate: false
+  xy: 430, 139
+  size: 95, 153
+  orig: 95, 153
+  offset: 0, 0
+  index: -1
+Mammoth_Haunch
+  rotate: false
+  xy: 704, 601
+  size: 147, 106
+  orig: 147, 106
+  offset: 0, 0
+  index: -1
+Mammoth_Head
+  rotate: false
+  xy: 704, 709
+  size: 240, 285
+  orig: 240, 285
+  offset: 0, 0
+  index: -1
+Mammoth_Rear_Leg
+  rotate: false
+  xy: 704, 481
+  size: 88, 118
+  orig: 88, 118
+  offset: 0, 0
+  index: -1
+Mammoth_Shoulder
+  rotate: false
+  xy: 290, 126
+  size: 138, 166
+  orig: 138, 166
+  offset: 0, 0
+  index: -1
+Mammoth_Tail
+  rotate: true
+  xy: 2, 2
+  size: 46, 133
+  orig: 46, 133
+  offset: 0, 0
+  index: -1

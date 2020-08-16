@@ -1,0 +1,10 @@
+xoff = 0;
+yoff = 0;
+res_x_off = -960;
+res_y_off = -540;
+shake = true;
+view_target = camera_get_view_target(view_camera[0]);
+view_target_x = 0;
+view_target_y = 0;
+camera_set_view_target(view_camera[0], noone);
+alarm[0] = 20;

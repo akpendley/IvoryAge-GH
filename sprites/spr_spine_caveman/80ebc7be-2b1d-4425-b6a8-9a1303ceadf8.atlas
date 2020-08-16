@@ -1,0 +1,132 @@
+
+skeleton.png
+size: 256,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Caveman_Eyes
+  rotate: false
+  xy: 112, 19
+  size: 22, 6
+  orig: 22, 6
+  offset: 0, 0
+  index: -1
+Caveman_Foot
+  rotate: true
+  xy: 209, 49
+  size: 13, 18
+  orig: 13, 18
+  offset: 0, 0
+  index: -1
+Caveman_Hair
+  rotate: false
+  xy: 2, 11
+  size: 61, 51
+  orig: 61, 51
+  offset: 0, 0
+  index: -1
+Caveman_Hair_Back
+  rotate: true
+  xy: 65, 2
+  size: 12, 27
+  orig: 12, 27
+  offset: 0, 0
+  index: -1
+Caveman_Head
+  rotate: false
+  xy: 65, 16
+  size: 45, 46
+  orig: 45, 46
+  offset: 0, 0
+  index: -1
+Caveman_Left_Arm
+  rotate: true
+  xy: 179, 48
+  size: 14, 28
+  orig: 14, 28
+  offset: 0, 0
+  index: -1
+Caveman_Left_Eyebrow
+  rotate: false
+  xy: 94, 8
+  size: 14, 6
+  orig: 14, 6
+  offset: 0, 0
+  index: -1
+Caveman_Loincloth
+  rotate: false
+  xy: 143, 45
+  size: 34, 17
+  orig: 34, 17
+  offset: 0, 0
+  index: -1
+Caveman_Mouth
+  rotate: false
+  xy: 2, 4
+  size: 30, 5
+  orig: 30, 5
+  offset: 0, 0
+  index: -1
+Caveman_Nose
+  rotate: false
+  xy: 229, 52
+  size: 10, 10
+  orig: 10, 10
+  offset: 0, 0
+  index: -1
+Caveman_Right_Arm
+  rotate: true
+  xy: 143, 28
+  size: 15, 29
+  orig: 15, 29
+  offset: 0, 0
+  index: -1
+Caveman_Right_Eyebrow
+  rotate: true
+  xy: 174, 29
+  size: 14, 6
+  orig: 14, 6
+  offset: 0, 0
+  index: -1
+Caveman_Torso
+  rotate: false
+  xy: 112, 27
+  size: 29, 35
+  orig: 29, 35
+  offset: 0, 0
+  index: -1
+air tattoo
+  rotate: false
+  xy: 34, 2
+  size: 7, 7
+  orig: 7, 7
+  offset: 0, 0
+  index: -1
+earth tattoo
+  rotate: false
+  xy: 136, 17
+  size: 6, 8
+  orig: 6, 8
+  offset: 0, 0
+  index: -1
+fire tattoo
+  rotate: false
+  xy: 43, 2
+  size: 6, 7
+  orig: 6, 7
+  offset: 0, 0
+  index: -1
+no tattoo
+  rotate: false
+  xy: 241, 54
+  size: 6, 8
+  orig: 6, 8
+  offset: 0, 0
+  index: -1
+water tattoo
+  rotate: false
+  xy: 51, 2
+  size: 6, 7
+  orig: 6, 7
+  offset: 0, 0
+  index: -1

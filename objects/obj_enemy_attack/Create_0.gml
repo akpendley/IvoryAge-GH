@@ -1,0 +1,12 @@
+lifetime = 4;
+hits = ds_list_create();
+damage = 1;
+stun = false;
+stun_duration = 0;
+owner = -1;
+xoff = 0;
+yoff = 0;
+damage_radius = 100;
+size = sprite_width;
+alarm[11] = 1;
+depth = -9999;
