@@ -111,3 +111,7 @@ part_type_speed(global.xp_particle,1,3,0,0);
 part_type_direction(global.xp_particle,0,359,0,0);
 part_type_gravity(global.xp_particle,0.10,90);
 part_type_life(global.xp_particle,45,45);
+
+//global.enemy_moves = ds_map_create();
+
+

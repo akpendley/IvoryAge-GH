@@ -34,8 +34,19 @@ if idling then
 	
 	if idlebusy = true and wait = false then
 		{
-			if distance_to_point(xdest, ydest) > 20 then
+			if point_distance(x, y, xdest, ydest) > 20 then
 				{
+				// set sprite x direction
+				
+				if (xdest < x) then
+					{
+					image_xscale = 1;
+					}
+				else
+					{
+					image_xscale = -1;
+					}
+					
 				if !needtoreturnhome then
 					{
 					mp_potential_step(xdest, ydest, walkspeed, false);
@@ -102,6 +113,16 @@ if instance_exists(target) and !needtoreturnhome and !attacking then //Pursue or
 	#region //Pursue or attack
 	if distance_to_object(target) > range then
 		{
+		// set sprite x direction
+				
+		if (xdest < x) then
+			{
+			image_xscale = 1;
+			}
+		else
+			{
+			image_xscale = -1;
+			}		
 		mp_potential_step(target.x, target.y, runspeed, false);
 		}
 	else

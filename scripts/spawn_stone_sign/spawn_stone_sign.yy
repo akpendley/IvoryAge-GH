@@ -1,8 +1,12 @@
 {
-    "id": "2f6ed41f-3ac5-45db-9923-c72d98b1ee51",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "spawn_stone_sign",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "spawn_stone_sign",
+  "tags": [],
+  "resourceType": "GMScript",
 }

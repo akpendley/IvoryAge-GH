@@ -4,7 +4,7 @@ if !attacking then //If I'm not in the middle of an attack
 	if distance_to_point(xorigin, yorigin) > 3000 then //If I'm too far from my spawn point
 		{
 		needtoreturnhome = true;
-		target = -1;
+		target = noone;
 		aggro = false;
 		idling = true;
 		xdest = xorigin;

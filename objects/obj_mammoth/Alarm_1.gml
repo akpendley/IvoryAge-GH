@@ -1,5 +1,5 @@
 /// @description Attempting to de-aggro
-if target = -1 then //still haven't found a reason to stay aggro
+if target = noone then //still haven't found a reason to stay aggro
 	{
 	aggro = false;
 	idling = true;

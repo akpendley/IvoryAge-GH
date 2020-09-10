@@ -1,1 +1,5 @@
-skeleton_animation_clear(1);
+function stop_animation() {
+	skeleton_animation_clear(1);
+
+
+}

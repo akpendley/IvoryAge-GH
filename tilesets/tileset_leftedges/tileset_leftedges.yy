@@ -1,56 +1,58 @@
 {
-    "id": "8ea44f58-a928-4a0e-99f2-80b7725090e8",
-    "modelName": "GMTileSet",
-    "mvc": "1.11",
-    "name": "tileset_leftedges",
-    "auto_tile_sets": [
-        
+  "spriteId": {
+    "name": "LeftEdges",
+    "path": "sprites/LeftEdges/LeftEdges.yy",
+  },
+  "tileWidth": 128,
+  "tileHeight": 128,
+  "tilexoff": 0,
+  "tileyoff": 0,
+  "tilehsep": 0,
+  "tilevsep": 0,
+  "spriteNoExport": true,
+  "textureGroupId": {
+    "name": "Default",
+    "path": "texturegroups/Default",
+  },
+  "out_tilehborder": 2,
+  "out_tilevborder": 2,
+  "out_columns": 4,
+  "tile_count": 16,
+  "autoTileSets": [],
+  "tileAnimationFrames": [],
+  "tileAnimationSpeed": 15.0,
+  "tileAnimation": {
+    "FrameData": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
     ],
-    "macroPageTiles": {
-        "SerialiseData": null,
-        "SerialiseHeight": 0,
-        "SerialiseWidth": 0,
-        "TileSerialiseData": [
-            
-        ]
-    },
-    "out_columns": 4,
-    "out_tilehborder": 2,
-    "out_tilevborder": 2,
-    "spriteId": "2b11d59e-d990-4388-9bbc-ab142ca3aabe",
-    "sprite_no_export": true,
-    "textureGroupId": "1225f6b0-ac20-43bd-a82e-be73fa0b6f4f",
-    "tile_animation": {
-        "AnimationCreationOrder": null,
-        "FrameData": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12,
-            13,
-            14,
-            15
-        ],
-        "SerialiseFrameCount": 1
-    },
-    "tile_animation_frames": [
-        
-    ],
-    "tile_animation_speed": 15,
-    "tile_count": 16,
-    "tileheight": 128,
-    "tilehsep": 0,
-    "tilevsep": 0,
-    "tilewidth": 128,
-    "tilexoff": 0,
-    "tileyoff": 0
+    "SerialiseFrameCount": 1,
+  },
+  "macroPageTiles": {
+    "SerialiseWidth": 0,
+    "SerialiseHeight": 0,
+    "TileSerialiseData": [],
+  },
+  "parent": {
+    "name": "Tile Sets",
+    "path": "folders/Tile Sets.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "tileset_leftedges",
+  "tags": [],
+  "resourceType": "GMTileSet",
 }

@@ -1,4 +1,5 @@
 #region //Stats
+name = "Mammoth";
 hp = 10;
 damage = 8;
 stun_duration = 60;
@@ -34,7 +35,7 @@ attacked = false;
 ready_to_attack = false;
 vision_obj = -1;
 attack_instance = -1;
-target = -1;
+target = noone;
 docile = false; //will attack on enter vision, true = will only attack based on damage or other actions
 needtoreturnhome = false;
 aggro = false;
@@ -44,13 +45,13 @@ max_vision = vision * 3;
 #endregion
 
 #region //Attack Types
-ground_pound_range = 40;
-dash_attack_range = 650;
-stun_slam_range = 70;
+ground_pound_range = 300;
+dash_attack_range = 800;
+stun_slam_range = 300;
 
-ground_pound_damage_radius = 320;
-dash_attack_damage_radius = 200;
-stun_slam_damage_radius = 460;
+ground_pound_damage_radius = 500;
+dash_attack_damage_radius = 300;
+stun_slam_damage_radius = 650;
 
 ground_pound_lifetime = 28; // 14
 dash_attack_lifetime = 120; // 60

@@ -5,13 +5,16 @@ enemy_vision_check();
 #region //Decide to move or idle
 if idling then
 	{
+		
+	// randomly decide to move 33% of the time
 	if idlebusy = false then
 		{
+		//show_debug_message("Maybe I'll wander...");
 		var rr = irandom_range(1,3);
 		if rr = 1 then //move
 			{
-			done = false;
-			while(done = false)
+			var done = false;
+			while(!done)
 				{
 				xdest = irandom_range(-300, 300) + x;
 				ydest = irandom_range(-300, 300) + y;
@@ -29,13 +32,25 @@ if idling then
 			xdest = x;
 			ydest = y;
 			alarm[0] = irandom_range(20, 180);
+			play_animation("idle");
 			}
 		}
 	
 	if idlebusy = true and wait = false then
 		{
-			if distance_to_point(xdest, ydest) > 20 then
+			if point_distance(x, y, xdest, ydest) > 20 then
 				{
+				// set sprite x direction
+				
+				if (xdest < x) then
+					{
+					image_xscale = 1;
+					}
+				else
+					{
+					image_xscale = -1;
+					}	
+					
 				if !needtoreturnhome then
 					{
 					mp_potential_step(xdest, ydest, walkspeed, false);
@@ -52,6 +67,7 @@ if idling then
 				}
 			else
 				{
+				//show_debug_message(name + " " + string(id) + ": Reached destination");
 				play_animation("idle");
 				idlebusy = false;
 				}
@@ -60,13 +76,15 @@ if idling then
 #endregion
 
 #region //Detect targets
-if target != -1 and aggro then
+if target != noone and aggro then
 	{
 	idling = false;
+	idlebusy = false;
+	wait = false;
 	enemy_vision_check();
 	vision = max_vision;
 	vision_obj.vision = vision;
-	show_debug_message("Identified target");
+	//show_debug_message("Identified target");
 	}
 #endregion
 
@@ -76,14 +94,19 @@ if instance_exists(target) and !needtoreturnhome and !attacking then //Pursue or
 	#region //Choose a new attack
 	if attack_type = -1 then
 		{
-		for(var j = 0; j < 1; j++) //This prevents me from stun slam twice in a row, making stun slam more dangerous
+		
+		var done = false;
+		while (!done)//This prevents me from stun slam twice in a row, making stun slam more dangerous
 			{
 			attack_type = irandom_range(1,3);
 			show_debug_message("Chose attack " + string(attack_type));
 			if attack_type = 3 and last_attack_type = 3 then
 				{
-				j -= 1;
 				show_debug_message("Can't stun slam twice, choosing attack again");
+				}
+			else
+				{
+				done = true;
 				}
 			}
 		switch(attack_type)
@@ -125,8 +148,19 @@ if instance_exists(target) and !needtoreturnhome and !attacking then //Pursue or
 		}
 	#endregion
 	#region //Pursue or attack
-	if distance_to_object(target) > range then
+	if point_distance(x, y, target.x, target.y) > range then
 		{
+		// set sprite x direction
+				
+		if (xdest < x) then
+			{
+			image_xscale = 1;
+			}
+		else
+			{
+			image_xscale = -1;
+			}		
+			
 		mp_potential_step(target.x, target.y, runspeed, false);
 		//show_debug_message("Pursuing target");
 		}
@@ -204,11 +238,11 @@ if !attacking then
 	{
 	if instance_exists(target) then	//try to de-aggro
 		{
-		if target != -1 then
+		if target != noone then
 			{
-			if distance_to_object(target) > max_vision then	//target is too far to chase, de-aggro after 5 seconds of no sight or enemy too far from spawn
+			if point_distance(x, y, target.x, target.y) > max_vision then	//target is too far to chase, de-aggro after 5 seconds of no sight or enemy too far from spawn
 				{
-				target = -1;
+				target = noone;
 				alarm[1] = 300;
 				show_debug_message("Target ran away, attempting to de-aggro");
 				}
@@ -216,9 +250,9 @@ if !attacking then
 		}
 	else
 		{
-		if target != -1 then
+		if target != noone then
 			{
-			target = -1;
+			target = noone;
 			alarm[1] = 300;
 			show_debug_message("Target no longer exists, resetting target and attempting to de-aggro");
 			}
